@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_nav"
+    app:startDestination="@id/Fragment_Home">
+
+    <fragment
+        android:id="@+id/Fragment_Home"
+        android:name="uts.uajy.kelompok_b_jualonline.Fragment.Home_Fragment"
+        android:label="home"
+        tools:layout="@layout/fragment_home_" />
+
+    <fragment
+        android:id="@+id/Fragment_Cart"
+        android:name="uts.uajy.kelompok_b_jualonline.Fragment.Cart_Fragment"
+        android:label="cart"
+        tools:layout="@layout/fragment_cart_" />
+    <fragment
+        android:id="@+id/Fragment_Chat"
+        android:name="uts.uajy.kelompok_b_jualonline.Fragment.History_Fragment"
+        android:label="chat"
+        tools:layout="@layout/fragment_chat_" />
+    <fragment
+        android:id="@+id/Fragment_User"
+        android:name="uts.uajy.kelompok_b_jualonline.Fragment.User_Fragment"
+        android:label="user"
+        tools:layout="@layout/fragment_user_" />
+</navigation>

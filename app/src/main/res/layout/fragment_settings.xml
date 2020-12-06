@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="?attr/backgroundcolor"
+    tools:context=".Fragment.SettingsFragment">
+    <RelativeLayout
+        android:id="@+id/relative_layoutTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:gravity="center">
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/Profile"
+            style="@style/TextAppearance.MaterialComponents.Headline4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="78dp"
+            android:layout_marginBottom="30dp"
+            android:text="@string/settings"
+            android:textColor="?attr/textcolordefault"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/relative_layoutPersonalization"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/relative_layoutTitle"
+        android:gravity="top">
+        <LinearLayout
+            android:id="@+id/linlayNama"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="20dp"
+            android:gravity="start">
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="App Personalization"
+                android:textColor="?attr/textcolor"
+                style="@style/TextAppearance.MaterialComponents.Body2"/>
+            <com.google.android.material.switchmaterial.SwitchMaterial
+                android:id="@+id/themeSwitch"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:checked="true"
+                android:textColor="?attr/textcolor"
+                android:text="@string/dark_mode"/>
+        </LinearLayout>
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/relative_layoutAboutUs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/relative_layoutPersonalization"
+        android:layout_margin="@dimen/margin_20"
+        android:gravity="top">
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnAboutUs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="About Us"
+            android:layout_centerHorizontal="true"
+            app:itemTextColor="?attr/iconcolor"/>
+    </RelativeLayout>
+</RelativeLayout>

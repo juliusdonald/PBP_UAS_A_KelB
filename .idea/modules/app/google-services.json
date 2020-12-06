@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "148574987326",
+    "firebase_url": "https://utspbp-5d7ba.firebaseio.com",
+    "project_id": "utspbp-5d7ba",
+    "storage_bucket": "utspbp-5d7ba.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:148574987326:android:93ef12cb04bbb643505d6f",
+        "android_client_info": {
+          "package_name": "uts.uajy.kelompok_b_jualonline"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "148574987326-jskebebau1gg6rso7ef9a7q7f4knqfbp.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "uts.uajy.kelompok_b_jualonline",
+            "certificate_hash": "1405f4574d3e18722f5047313b237434b77dc8b9"
+          }
+        },
+        {
+          "client_id": "148574987326-9jhv4gh6kc6cl52gfo84tk2rj0feipng.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD5h5YSRqW6e340sp7aJChMv9QgyeWHvJQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "148574987326-9jhv4gh6kc6cl52gfo84tk2rj0feipng.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

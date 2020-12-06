@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/Fragment_Home"
+        android:icon="@drawable/ic_baseline_home_24"
+        android:textColor="?attr/textcolor"
+        android:title="@string/Home" />
+
+    <item
+        android:id="@+id/Fragment_Cart"
+        android:icon="@drawable/ic_baseline_shopping_cart_24"
+        android:textColor="?attr/textcolor"
+        android:title="@string/Cart"/>
+
+    <item
+        android:id="@+id/Fragment_Chat"
+        android:icon="@drawable/ic_baseline_history_24"
+        android:textColor="?attr/textcolor"
+        android:title="@string/history" />
+
+    <item
+        android:id="@+id/Fragment_User"
+        android:icon="@drawable/ic_baseline_account_circle_24"
+        android:textColor="?attr/textcolor"
+        android:title="@string/User" />
+</menu>

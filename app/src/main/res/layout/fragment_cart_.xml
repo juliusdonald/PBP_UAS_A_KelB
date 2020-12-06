@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/backgroundcolor"
+    tools:context=".Fragment.Cart_Fragment">
+    <RelativeLayout
+        android:id="@+id/semua"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:id="@+id/judulListCart"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/list_barang"
+                style="@style/TextAppearance.MaterialComponents.Headline5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/list_cart"
+                android:textStyle="bold"
+                android:textColor="?attr/textcolor"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="20dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                />
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/keterangantotal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/judulListCart">
+
+            <!--subtotal -->
+            <RelativeLayout
+                android:id="@+id/layoutsubtotal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_16">
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/subtotal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:gravity="end"
+                    android:text="@string/subtotal"
+                    android:textColor="?attr/textcolor" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/txt_harga"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="25dp"
+                    android:layout_marginStart="@dimen/margin_20"
+                    android:textColor="?attr/textcolor" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/layoutongkir"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_16"
+                android:layout_below="@id/layoutsubtotal">
+                <!-- Ongkos Kirim -->
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/txt_ongkir"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_20"
+                    android:gravity="end"
+                    android:textColor="?attr/textcolor"
+                    android:text="@string/ongkos_kirim" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/ongkir"
+                    android:textColor="?attr/textcolor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="25dp"
+                    android:layout_marginStart="@dimen/margin_20"
+                    android:text="" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/layouttotalharga"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/layoutongkir"
+                android:layout_marginTop="@dimen/margin_16">
+                <!-- Ongkos Kirim -->
+                <!-- Total Harga -->
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/txt_totalharga"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_20"
+                    android:textColor="?attr/textcolor"
+                    android:text="@string/total_harga"
+                    style="@style/TextAppearance.MaterialComponents.Headline6"
+                    android:textStyle="bold" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/totalharga"
+                    android:textColor="?attr/textcolor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginStart="@dimen/margin_20"
+                    android:text=""
+                    style="@style/TextAppearance.MaterialComponents.Body2"
+                    android:textStyle="bold"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/layoutcheckout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/layouttotalharga"
+                android:gravity="center"
+                android:layout_marginTop="@dimen/margin_16">
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_checkout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="?attr/buttoncolor"
+                    android:text="Proceed to Checkout"
+                    android:textColor="?attr/textcolordefault" />
+            </RelativeLayout>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/keterangantotal"
+            android:layout_margin="@dimen/margin_16">
+            <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+                android:id="@+id/swipe_refresh"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/cart_rv"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="@dimen/margin_16"
+                    tools:listitem="@layout/adapter_recycler_view_cart" />
+            </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+    <!-- Subtotal -->
+
+</RelativeLayout>
