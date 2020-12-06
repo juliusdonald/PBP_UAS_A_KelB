@@ -20,6 +20,8 @@ import org.junit.runner.RunWith;
 import static androidx.test.espresso.Espresso.onView;
 import static androidx.test.espresso.Espresso.pressBack;
 import static androidx.test.espresso.action.ViewActions.click;
+import static androidx.test.espresso.action.ViewActions.closeSoftKeyboard;
+import static androidx.test.espresso.action.ViewActions.replaceText;
 import static androidx.test.espresso.action.ViewActions.scrollTo;
 import static androidx.test.espresso.contrib.RecyclerViewActions.actionOnItemAtPosition;
 import static androidx.test.espresso.matcher.ViewMatchers.isDisplayed;
@@ -31,13 +33,33 @@ import static org.hamcrest.Matchers.is;
 
 @LargeTest
 @RunWith(AndroidJUnit4.class)
-public class DeleteReviewTest_PBP_A_KelB {
+public class DeleteReviewTest_KelB {
 
     @Rule
-    public ActivityTestRule<SplashScreen> mActivityTestRule = new ActivityTestRule<>(SplashScreen.class);
+    public ActivityTestRule<ActivityLogin> mActivityTestRule = new ActivityTestRule<>(ActivityLogin.class);
 
     @Test
-    public void deleteReviewTest_PBP_A_KelB() {
+    public void deleteReviewTest_KelB() {
+        ViewInteraction textInputEditText = onView(
+                allOf(withId(R.id.email),
+                        childAtPosition(
+                                childAtPosition(
+                                        withId(R.id.input_number_layout),
+                                        0),
+                                0),
+                        isDisplayed()));
+        textInputEditText.perform(replaceText("coolbro230@gmail.com"), closeSoftKeyboard());
+
+        ViewInteraction textInputEditText2 = onView(
+                allOf(withId(R.id.pass),
+                        childAtPosition(
+                                childAtPosition(
+                                        withId(R.id.input_name_layout),
+                                        0),
+                                0),
+                        isDisplayed()));
+        textInputEditText2.perform(replaceText("daniel230"), closeSoftKeyboard());
+
         ViewInteraction materialButton = onView(
                 allOf(withId(R.id.signin), withText("SIGN IN"),
                         childAtPosition(
